@@ -3,13 +3,15 @@ import React, { useState } from "react";
 import Game from "./Game";
 import RestartGame from "./RestartGame";
 
+import { playNextMusic } from "../utils/musicPlayer";
+
 interface ModalProps {
-  isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  isOpen: boolean;
 }
 
-const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+const Modal = ({ onClose, children, isOpen }: ModalProps) => {
   const [showRestartGame, setShowRestartGame] = useState(false);
   const [restartGame, setRestartGame] = useState(false);
 
@@ -21,6 +23,7 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
   const handleRestartMatch = () => {
     setRestartGame(true);
     setShowRestartGame(false);
+    playNextMusic();
   };
 
   const handleShowButtons = () => {

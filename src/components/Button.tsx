@@ -1,10 +1,10 @@
 interface ButtonProps {
   onClick?: () => void;
-  text: string;
   style?: string;
+  text: string;
 }
 
-const Button = ({ onClick, text, style = "primary" }: ButtonProps) => {
+const Button = ({ onClick, style = "primary", text }: ButtonProps) => {
   const NewGameButton =
     "bg-yellow-500 hover:bg-yellow-600 text-white rounded w-32 h-10";
   const startButton =

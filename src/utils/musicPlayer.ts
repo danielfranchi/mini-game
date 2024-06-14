@@ -1,17 +1,25 @@
-import arcadeKidMusic from "../assets/sounds/arcade_kid.mp3";
-import retroFunkMusic from "../assets/sounds/retro_funk.mp3";
-import correctPingTone from "../assets/sounds/correct_ping_tone.mp3";
 import alertError from "../assets/sounds/alert_error.mp3";
+import arcadeKidMusic from "../assets/sounds/arcade_kid.mp3";
+import correctPingTone from "../assets/sounds/correct_ping_tone.mp3";
+import fasterMusic from "../assets/sounds/faster.mp3";
+import retroFunkMusic from "../assets/sounds/retro_funk.mp3";
 
-const availableMusics = [arcadeKidMusic, retroFunkMusic];
+const availableMusics = [arcadeKidMusic, retroFunkMusic, fasterMusic];
 let lastPlayedAudio: HTMLAudioElement | null = null;
 let musicIndices: number[] = [];
 let currentMusicIndex: number = 0;
 
-const shuffleArray = (array: number[]) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+const shuffleArray = (musicIndicesArray: number[]) => {
+  for (
+    let currentIndex = musicIndicesArray.length - 1;
+    currentIndex > 0;
+    currentIndex--
+  ) {
+    const randomIndex = Math.floor(Math.random() * (currentIndex + 1));
+    [musicIndicesArray[currentIndex], musicIndicesArray[randomIndex]] = [
+      musicIndicesArray[randomIndex],
+      musicIndicesArray[currentIndex],
+    ];
   }
 };
 
@@ -30,6 +38,7 @@ export const playNextMusic = () => {
   const audio = new Audio(availableMusics[musicIndices[currentMusicIndex]]);
   audio.volume = 0.2;
   audio.play();
+  audio.addEventListener("ended", playNextMusic);
   lastPlayedAudio = audio;
 
   currentMusicIndex++;

@@ -1,18 +1,18 @@
 import Button from "./Button";
 
 interface RestartGameProps {
-  onRestart: () => void;
   onLoad: () => void;
-  restartText: string;
+  onRestart: () => void;
   onLoadText: string;
+  restartText: string;
   style: string;
 }
 
 const RestartGame = ({
-  onRestart,
   onLoad,
-  restartText,
+  onRestart,
   onLoadText,
+  restartText,
   style,
 }: RestartGameProps) => (
   <div className="flex justify-center space-x-2">
