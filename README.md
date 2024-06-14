@@ -1,11 +1,12 @@
 # MINI-GAME - Press The Letters
+### Mini-Game Press The Letters, seu objetivo é precionar as letras na ordem correta antes de acabar o tempo.
 
-### :rocket: Acessar jogo
+### 🕹️ MiNI-GAME
 
-[![Website](https://img.shields.io/badge/Website-Link-2bce3a)](https://65f55ceecac9138c0552f729--tourmaline-salmiakki-c0d708.netlify.app/)
+[![MINI-GAME](https://img.shields.io/badge/Website-Link-2bce3a)](https://65f55ceecac9138c0552f729--tourmaline-salmiakki-c0d708.netlify.app/)
 
 ```bash
-# Access the website at this link:
+# Acesse o site neste link:
 $ https://65f55ceecac9138c0552f729--tourmaline-salmiakki-c0d708.netlify.app/
 ```
 
