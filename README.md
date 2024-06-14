@@ -3,11 +3,11 @@
 
 ### 🕹️ MiNI-GAME
 
-[![MINI-GAME](https://img.shields.io/badge/Website-Acessar_Jogo-2bce3a?style=for-the-badge&logo=steam)](https://65f55ceecac9138c0552f729--tourmaline-salmiakki-c0d708.netlify.app/)
+[![MINI-GAME](https://img.shields.io/badge/Website-Acessar_Jogo-2bce3a?style=for-the-badge&logo=steam)](https://666bb3478ce078030ae920df--joyful-sunburst-6a922a.netlify.app/)
 
 ```bash
 # Acesse o site neste link:
-$ https://65f55ceecac9138c0552f729--tourmaline-salmiakki-c0d708.netlify.app/
+$ https://666bb3478ce078030ae920df--joyful-sunburst-6a922a.netlify.app/
 ```
 
 <br />
